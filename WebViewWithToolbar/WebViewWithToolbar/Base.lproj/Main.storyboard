@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web ViewVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebViewVC" customModule="WebViewWithToolbar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLv-fV-DtQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M7z-La-pV8">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem image="chevron.backward" catalog="system" id="Ip5-iE-gDU">
+                                        <connections>
+                                            <action selector="goBackwardTapped:" destination="BYZ-38-t0r" id="UVV-68-MoN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="CHJ-0Y-zrp"/>
+                                    <barButtonItem image="chevron.forward" catalog="system" id="qfS-ev-kT2">
+                                        <connections>
+                                            <action selector="goForwardTapped:" destination="BYZ-38-t0r" id="KLX-ux-jfu"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="miS-Iu-EhO"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="cR1-6a-wGK"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="jQt-Ul-seg"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="U6L-Ft-Mp6"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="gjA-hA-iIB"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="lSk-IJ-oDN"/>
+                                    <barButtonItem image="safari" catalog="system" id="CoE-SA-aKd">
+                                        <connections>
+                                            <action selector="openInSafariTapped:" destination="BYZ-38-t0r" id="piE-GA-Eyq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mLv-fV-DtQ" secondAttribute="trailing" id="6hN-MI-4Gd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mLv-fV-DtQ" secondAttribute="bottom" id="ENB-iq-aai"/>
+                            <constraint firstItem="M7z-La-pV8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Kq8-tB-aWI"/>
+                            <constraint firstItem="mLv-fV-DtQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Rc8-H9-meF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M7z-La-pV8" secondAttribute="bottom" id="mjZ-L0-XKS"/>
+                            <constraint firstItem="mLv-fV-DtQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vXM-zu-8eA"/>
+                            <constraint firstItem="M7z-La-pV8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="y63-Xe-skT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="mLv-fV-DtQ" id="05V-2C-sYU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="110"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="safari" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
