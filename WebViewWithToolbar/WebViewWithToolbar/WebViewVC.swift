@@ -13,20 +13,15 @@ class WebViewVC: UIViewController {
     @IBOutlet weak var webView: WKWebView!
     
     let strURL = "https://www.patika.dev/"
-    let strHTML = "<html><body><p>Hello!</p></body></html>"
-    let strHTML2 = "<html><body p style='color:red' text=\"#FF0000\" face=\"Bookman Old Style, Book Antiqua, Garamond\" size=\"5\">%@</body></html>"
-    let strHTML3 = "<html><body><h1>My First Heading</h1><p>My first paragraph.</p></body></html>"
-
+    let strHTML = "<html><body p style='color:red' text=\"#FF0000\" face=\"Bookman Old Style, Book Antiqua, Garamond\" size=\"5\"><h1>PATİKA.DEV<h1></body></html>"
     
-    let strHTML4 = "<html><body><h1 style='background-color:Tomato;'>Tomato</h1><h1 style='background-color:Orange;'>Orange</h1><h1 style='background-color:DodgerBlue;'>DodgerBlue</h1><h1 style='background-color:MediumSeaGreen;'>MediumSeaGreen</h1><h1 style='background-color:LightGray;'>LightGray</h1></body></html>"
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //for the using goBack and goForward Buttons uncomment the link in below and comment the loadHTMLString.
         //configurationsOfWebView()
         
-        webView.loadHTMLString(strHTML4, baseURL: nil)
+        webView.loadHTMLString(strHTML, baseURL: nil)
     }
     
     func configurationsOfWebView() {
