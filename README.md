@@ -1,5 +1,8 @@
 # HW4
 
+## Homeworks:
+Use WebViewWithToolbar and CoreLocationAndMapKit projects.
+
 ## Ödev 1: 
 Bu hafta geliştirdiğimiz projedeki webView ekranında 
 - toolBar’a goForward, goBackward ve open in safari butonları ve özellikleri eklenecektir.
